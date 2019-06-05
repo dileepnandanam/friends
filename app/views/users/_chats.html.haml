@@ -1,0 +1,14 @@
+.chats-container
+  %h3.white
+    = "Chat with #{@user.name}"
+  .chat-thread{id: @user.id}
+    - @chats.each do |c|
+      = render partial: 'chats/chat', locals: {chat: c}
+  .chat-box
+    = simple_form_for Chat.new, remote: true do |f|
+      = button_tag 'send image', class: 'open-image-upload'
+      .image-upload.d-none
+        = f.input :image, label: false
+      = f.input :text, label: false
+      = f.hidden_field :reciver_id, value: @user.id
+      = f.submit 'submit', class: 'btn-primary d-none'

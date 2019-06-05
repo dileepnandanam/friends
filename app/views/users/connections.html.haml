@@ -1,0 +1,10 @@
+.my-space.connections.col-lg-4.col-sm-4.col-xs-12.pull-left
+  %h3.white
+    Get a partner
+  - ['female', 'male', 'others'].each do |g|
+    = link_to user_path(current_user, gender: g), remote: true do
+      .question.select-connection
+        "connect to random #{g}"
+.chats.col-lg-8.col-sm-8.col-xs-12.pull-left
+  - if @user
+    = render partial: 'chats'

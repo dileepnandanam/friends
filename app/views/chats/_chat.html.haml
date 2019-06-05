@@ -1,0 +1,6 @@
+.chat{ class: chat.sender_id == current_user.id ? 'float-right' : 'float-left' }
+  - if chat.image.present?
+    = image_tag chat.image.url(:original)
+  %br
+  = auto_link chat.text, html: {target: '_blank'}
+.clearfix

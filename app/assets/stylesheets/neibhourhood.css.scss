@@ -1,0 +1,260 @@
+.world {
+	padding: 0px !important;
+}
+.neibhourhood-container {
+	margin-bottom: 15px;
+}
+.neibhourhood {
+	height: 500px;
+	width: 100%;
+	background-color: #3b6b18;
+	overflow: hidden;
+	position: relative;
+}
+.left, .right {
+	height: 40px;
+	width: 40px;
+	box-sizing: border-box;
+}
+
+.move-controll button {
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+}
+.move-controll button:focus {
+	outline: none;
+}
+.left button, .right button {
+	border-radius: 10px;
+}
+
+.move-controll.left {
+	position: absolute;
+	left: 1%;
+	top: 91%;
+}
+.move-controll.right {
+	position: absolute;
+	right: 1%;
+    top: 91%;
+}
+
+.background-fixed {
+	width: 100%;
+	height: 300px;
+	background-image: image-url('sky.jpeg');
+	background-size: cover;
+	overflow: auto;
+}
+.sun {
+	background-color: yellow;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	margin-top: 50px;
+}
+.background {
+	height: 200px;
+	top: 102px;
+	display: inline-flex;
+	position: absolute;
+
+}
+.background-block {
+	width: 1000px;
+	height: 100%;
+	position: relative;
+}
+.homes {
+	position: absolute;
+	height: 342px;
+	top: 0px;
+	display: inline-flex;
+}
+.yard {
+	height: 100%;
+	width: 400px;
+	position: relative;
+
+}
+.wall {
+	position: absolute;
+	bottom: 0;
+}
+.left-wall, .right-wall {
+	width: 150px;
+    height: 63px;
+    margin-left: 40px;
+}
+.wall img {
+	width: 100%;
+	height: 100%;
+}
+.wall-expanded {
+	width: 80%;
+    top: 10%;
+    height: 80%;
+    background-image: image-url('blured.jpeg');
+    background-size: cover;
+    position: absolute;
+    left: 10%;
+}
+.posts {
+	height: 60%;
+	overflow: scroll;
+}
+.wall-expanded .new-post {
+	margin: 10px 4px;
+}
+.wall-close {
+	cursor: default;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.posts-container {
+	padding: 10px;
+	height: 100%;
+}
+.post .post-body {
+	margin-left: 20px;
+}
+.post .user-details {
+	font-size: 14px;
+}
+.post .user-details img {
+	width: 24px
+}
+
+.street {
+	background-color: #231035;
+	height:70px;
+	width: 100%;
+	position: absolute;
+	top: 350px;
+}
+
+
+.home {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+	width: 200px;
+	height: 185px;
+}
+.home img {
+	width: 100%;
+	height: 100%;
+}
+
+.roof {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 64px solid red;
+  border-top: 0px solid;
+}
+.body {
+    width: 140px;
+    height: 90px;
+    margin-left: 30px;
+    background-color: white;
+    overflow: auto;
+}
+.name-board {
+    font-size: 12px;
+    text-align: center;
+    height: 10px;
+    margin-top: -103px;
+    color: sandybrown;
+}
+.door {
+	width: 30px;
+    height: 70px;
+    margin: 10px 0 0 20px;
+    background-color: black;
+    display: inline-block;
+    float: left;
+}
+.window {
+    width: 40px;
+    background-color: black;
+    height: 40px;
+    float: left;
+    margin: 16px 0 0 10px;
+}
+.basement {
+    width: 200px;
+    height: 30px;
+	background-color: brown;
+}
+
+.car {
+	position: absolute;
+	left: 50%;
+	top: 330px;
+}
+.car-body {
+	margin-left: -50%;
+}
+.upper-body {
+	margin-left: 35px;
+    border-radius: 50px 50px 0 0;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    overflow: auto;
+    display: inline-flex;
+}
+.upper-body .front {
+	margin: 5px 5px 0 5px;
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50px 0 0 0;
+}
+.upper-body .back {
+	margin: 5px 5px 0 5px;
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	border-radius: 0 50px 0 0;
+	float: left;
+}
+.lower-body {
+	border-radius: 20px 20px 0 0;
+    width: 170px;
+    height: 30px;
+    background-color: red;
+    overflow: visible;
+    margin-top: -2px;
+}
+.lower-body .front {
+	width: 40px;
+    height: 20px;
+    border-radius: 20px 20px 0 0;
+    background-color: black;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.lower-body .back {
+	width: 40px;
+	height: 20px;
+	border-radius: 20px 20px 0 0;
+	background-color: black;
+	float: left;
+	margin: 10px 0 0 70px;
+}
+.wheel {
+	border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 6px solid black;
+    margin: 5px;
+}

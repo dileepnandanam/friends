@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{ :name=>"viewport", :content=>"width=device-width, initial-scale=1.0"}
+    %meta{ :name=>"google-site-verification", :content=>"RTn56zwPNTl1Q8QG8ENW3Ipd9aQd7znmDNaCRgcxVtc"}
+    %meta{ :name=>"Description", :content=> "free adult chat sex chat"}
+    %title Friends chat
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .nav-bar
+      - if current_user
+        .pull-right
+          = link_to current_user.name || current_user.email, connections_users_path
+        .pull-right{class: controller_name + action_name == 'homeshow' ? 'd-none' : ''}
+          = link_to 'chats', connections_users_path
+      - else
+        .pull-right
+          = link_to "Sign in", new_user_session_path
+        .pull-right
+          = link_to "Sign up", new_user_registration_path
+      .clearfix
+    .common-bg{class: "#{controller_name}-#{action_name}"}
+      - if flash[:notice].present?
+        .flash
+          = flash[:notice]
+      = yield
