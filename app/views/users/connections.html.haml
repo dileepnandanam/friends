@@ -4,7 +4,7 @@
   - ['female', 'male', 'others'].each do |g|
     = link_to user_path(current_user, gender: g), remote: true do
       .question.select-connection
-        "connect to random #{g}"
+        = "connect to random #{g}"
 .chats.col-lg-8.col-sm-8.col-xs-12.pull-left
   - if @user
     = render partial: 'chats'
