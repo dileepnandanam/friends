@@ -56,3 +56,8 @@
 .gender_form input {
 	margin-right: 10px;
 }
+.h-desc {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
