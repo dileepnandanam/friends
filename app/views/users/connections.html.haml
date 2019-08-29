@@ -2,9 +2,11 @@
   %h3.white
     Get a partner
   - ['female', 'male', 'others'].each do |g|
-    = link_to user_path(current_user, gender: g), remote: true do
+    = link_to connect_user_path(current_user, gender: g), method: :post, remote: true, class: 'connect' do
       .question.select-connection
         = "connect to random #{g}"
 .chats.col-lg-8.col-sm-8.col-xs-12.pull-left
-  - if @user
+  - if @message.present?
+    %h3.white= @message
+  - if @user.present?
     = render partial: 'chats'

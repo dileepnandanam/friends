@@ -21,7 +21,9 @@ $(document).on('turbolinks:load', function() {
 	})
 
 	$('.chats').on('keypress', 'textarea', function(e) {
-		if(e.which == 13)
+		if(e.which == 13) {
 			Rails.fire($(this).closest('form')[0], 'submit')
+			$('textarea').val('')
+		}
 	})
 })

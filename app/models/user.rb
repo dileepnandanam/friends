@@ -1,15 +1,11 @@
 class User < ApplicationRecord
-  
-  has_many :questions
-  has_many :responses
-  has_many :posted_responses, foreign_key: :responce_user_id, class_name: 'Response'
-  has_many :posted_posts, foreign_key: :post_user_id, class_name: 'Post'
-  has_many :posts
-  has_many :groups
-  has_many :comments
-  has_many :votes
 
   validates :name, presence: true
+  validates :gender, presence: true
+  belongs_to :user, optional: true
+  def chats
+    Chat.where('sender_id = ? or reciver_id = ?', id, id)
+  end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

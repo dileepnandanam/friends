@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users do
     get :connections, on: :collection
+    post :connect, on: :member
   end
 
   resources :chats do

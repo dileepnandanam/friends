@@ -1,1 +1,5 @@
-= render partial: 'chats'
+.chats
+  - if @message.present?
+    %h3.white= @message
+  - if @user.present?
+    = render partial: 'chats'
